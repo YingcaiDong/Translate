@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Translate_widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="input your text here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="is2-gl-CIr">
+                                <rect key="frame" x="67" y="106" width="240" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="is2-gl-CIr" secondAttribute="height" multiplier="240:53" id="Pc0-kv-PHA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingBegin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jNs-sR-XkO"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Output language" translatesAutoresizingMaskIntoConstraints="NO" id="wHk-3n-bBk">
+                                <rect key="frame" x="67" y="221" width="240" height="357"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wHk-3n-bBk" secondAttribute="height" multiplier="80:119" id="z0S-uX-OLX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-mb-Cf3">
+                                <rect key="frame" x="146" y="183" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ehH-mb-Cf3" secondAttribute="height" multiplier="83:30" id="aXK-OC-Fo2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="startTranslate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLg-yq-iKu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wHk-3n-bBk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="BDT-4N-4aZ"/>
+                            <constraint firstItem="ehH-mb-Cf3" firstAttribute="top" secondItem="is2-gl-CIr" secondAttribute="bottom" constant="24" id="G9T-66-A9P"/>
+                            <constraint firstItem="ehH-mb-Cf3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PDg-L4-nib"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wHk-3n-bBk" secondAttribute="bottom" constant="89" id="U0e-zq-JSQ"/>
+                            <constraint firstItem="is2-gl-CIr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Udd-za-cTz"/>
+                            <constraint firstItem="wHk-3n-bBk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V8t-dQ-sah"/>
+                            <constraint firstItem="is2-gl-CIr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="cWr-jy-kJ3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="is2-gl-CIr" secondAttribute="trailing" constant="52" id="eRt-aI-XVz"/>
+                            <constraint firstItem="ehH-mb-Cf3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130" id="hkj-tJ-8XS"/>
+                            <constraint firstItem="is2-gl-CIr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="yjd-cU-Ani"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="OutputTextView" destination="wHk-3n-bBk" id="4Hg-XI-E8y"/>
+                        <outlet property="languateInputLabel" destination="is2-gl-CIr" id="voK-zB-9Si"/>
+                        <outlet property="translateButton" destination="ehH-mb-Cf3" id="WcO-AD-oro"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
